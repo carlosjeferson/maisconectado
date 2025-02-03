@@ -6,7 +6,8 @@
 }
 
 body{
-    width: 100vw;
+    background-color: #f4f4f4;
+    width: 98vw;
     height: 100vh;
 }
 /* TELA DE LOGIN */
@@ -108,6 +109,7 @@ body{
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
 .tela-cadastro-container {
@@ -120,6 +122,7 @@ body{
 }
 
 .tela-cadastro-titulo {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
@@ -143,11 +146,17 @@ body{
 }
 
 .tela-cadastro-input {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 10px);
+    padding: 10px 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;;
+}
+
+.tela-cadastro-input:focus{
+    border-color: #3200fa;
 }
 
 .tela-cadastro-botao {
@@ -158,6 +167,7 @@ body{
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .tela-cadastro-botao:hover {
@@ -176,6 +186,7 @@ li{
 
 header{
     position: fixed;
+    z-index: 2;
     width: 98%;
     display: flex;
     justify-content: space-between;
@@ -238,22 +249,274 @@ header a{
     transition: all 0.7s ease-out;
 }
 
-.main-principal{
+.main-principal {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
     text-align: center;
     padding-top: 15vh;
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.main-principal figure img{
-    width: 700px;
-    height: 400px;
-}
-
-.main-principal h1{
+.main-principal h1 {
+    margin-top: 10vh;
     font-family: 'Poppins', sans-serif;
-    color: #000000;
+    font-size: 2.5rem;
+    color: #136305;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-principal p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-principal p:first-of-type {
+    font-weight: 500;
+    color: #136305;
+}
+
+.main-principal p:nth-of-type(2) {
+    font-style: italic;
+    color: #555;
+}
+
+.main-principal p:last-of-type {
+    font-weight: bold;
+    color: #136305;
+}
+
+.main-principal figure {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-principal figure img {
+    width: 100%;
+    max-width: 700px;
+    
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.main-principal figure img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo da seção de contato */
+.section-contato {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.section-contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-contato-titulo {
+    font-size: 2.5rem;
+    color: #136305;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-contato-descricao {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-contato-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.section-contato-canais {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex: 1;
+    max-width: 400px;
+}
+
+.section-contato-subtitulo {
+    font-size: 1.8rem;
+    color: #136305;
+    margin-bottom: 20px;
+}
+
+.section-contato-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.section-contato-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.section-contato-icone {
+    font-size: 1.2rem;
+}
+
+.section-contato-texto {
+    flex: 1;
+}
+
+.section-contato-formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 500px;
+}
+
+.section-contato-campo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.section-contato-rotulo {
+    display: block;
+    font-size: 1rem;
+    color: #136305;
+    margin-bottom: 5px;
+}
+
+.section-contato-input,
+.section-contato-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.section-contato-textarea {
+    resize: vertical;
+}
+
+.section-contato-botao {
+    background-color: #136305;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section-contato-botao:hover {
+    background-color: #0f4d03;
+}
+
+/* Estilo da seção Sobre Nós */
+.sobre-nos {
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.sobre-nos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-nos-titulo {
+    font-size: 2.5rem;
+    color: #136305;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nos-descricao {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre-nos-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.sobre-nos-texto {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.sobre-nos-subtitulo {
+    font-size: 1.8rem;
+    color: #136305;
+    margin-bottom: 15px;
+}
+
+.sobre-nos-paragrafo {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sobre-nos-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.sobre-nos-item {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre-nos-imagem {
+    flex: 1;
+    max-width: 500px;
+}
+
+.sobre-nos-imagem img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
