@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #f4f4f4;
     width: 98vw;
@@ -187,7 +191,7 @@ li{
 header{
     position: fixed;
     z-index: 2;
-    width: 98%;
+    width: 99%;
     display: flex;
     justify-content: space-between;
     background-color: #136305;
@@ -421,7 +425,8 @@ header a{
 }
 
 .section-contato-textarea {
-    resize: vertical;
+    height: 80px;
+    resize: none;
 }
 
 .section-contato-botao {
@@ -519,4 +524,25 @@ header a{
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+/* Estiliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #0f4d03; 
+}
+
+/* Estiliza o "thumb" (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background: #05a622; 
+    border-radius: 10px; 
+}
+
+/* Estiliza o thumb quando hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cdb5b5; 
 }
